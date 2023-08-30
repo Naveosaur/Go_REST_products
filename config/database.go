@@ -10,7 +10,7 @@ import (
 var DB *sql.DB
 
 func ConnectDB() {
-	db, err := sql.Open("mysql", "root:@/go_rest_api")
+	db, err := sql.Open("mysql", "root:@/go_rest_api?parseTime=true")
 	if err != nil {
 		panic(err)
 	}
